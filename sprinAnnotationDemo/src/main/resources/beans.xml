@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="GB2312"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-2.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--包扫描，只要标注了我们熟悉的@Controller\@Service/@Respority/@Component
+    只要标注了任何一个，都会被自动扫描加入到容器中 ，以前的xml配置是需要配置下面的component-->
+    <context:component-scan base-package="com.luoyu" use-default-filters="true"></context:component-scan>
+    <bean id="person" class="com.luoyu.bean.Person">
+        <property name="age" value="18"></property>
+        <property name="name" value="zhangsan"></property>
+    </bean>
+
+</beans>
